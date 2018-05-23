@@ -113,6 +113,35 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &117534483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: c9f2277f2b4414ff9abf05e783890171, type: 2}
+  m_PrefabInternal: {fileID: 1461732834}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 117534484}
+  - component: {fileID: 805507377}
+  m_Layer: 0
+  m_Name: HandController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &117534484
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: c9f2277f2b4414ff9abf05e783890171, type: 2}
+  m_PrefabInternal: {fileID: 1461732834}
+  m_GameObject: {fileID: 117534483}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -4, z: 6}
+  m_LocalScale: {x: 20, y: 20, z: 20}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &611089955
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,42 +239,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leap_controller_: {fileID: 805507377}
---- !u!1 &783013314
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100000, guid: c9f2277f2b4414ff9abf05e783890171, type: 2}
-  m_PrefabInternal: {fileID: 1461732834}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 783013315}
-  - component: {fileID: 805507377}
-  m_Layer: 0
-  m_Name: HandController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &783013315
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400000, guid: c9f2277f2b4414ff9abf05e783890171, type: 2}
-  m_PrefabInternal: {fileID: 1461732834}
-  m_GameObject: {fileID: 783013314}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4, z: 6}
-  m_LocalScale: {x: 20, y: 20, z: 20}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &805507377
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11400000, guid: c9f2277f2b4414ff9abf05e783890171,
     type: 2}
   m_PrefabInternal: {fileID: 1461732834}
-  m_GameObject: {fileID: 783013314}
+  m_GameObject: {fileID: 117534483}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c4e0350c46ae405b8db39262c18b8f5, type: 3}
@@ -413,7 +413,7 @@ Prefab:
     m_RemovedComponents:
     - {fileID: 11424590, guid: c9f2277f2b4414ff9abf05e783890171, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c9f2277f2b4414ff9abf05e783890171, type: 2}
-  m_RootGameObject: {fileID: 783013314}
+  m_RootGameObject: {fileID: 117534483}
   m_IsPrefabParent: 0
 --- !u!1 &2090647445
 GameObject:
