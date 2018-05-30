@@ -1096,7 +1096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   handModelPalmWidth: 0.085
   fingers:
-  - {fileID: 11460540}
+  - {fileID: 0}
   - {fileID: 11460538}
   - {fileID: 11460536}
   - {fileID: 11460532}

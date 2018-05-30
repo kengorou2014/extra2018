@@ -259,6 +259,10 @@ public abstract class HandModel : MonoBehaviour {
       if (fingers[f] != null) {
         fingers[f].fingerType = (Finger.FingerType)f;
         fingers[f].InitFinger();
+//	  	if (fingers[f].fingerType.ToString() == "TYPE_MIDDLE") {
+//        	Debug.Log("fingers[f]: " + fingers[f]);
+//			Debug.Log("fingers[f].fingerType: " + fingers[f].fingerType);
+//       	}
       }
     }
 

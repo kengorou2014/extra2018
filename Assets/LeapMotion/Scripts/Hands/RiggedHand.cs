@@ -33,8 +33,13 @@ public class RiggedHand : HandModel {
 
     for (int i = 0; i < fingers.Length; ++i) {
       if (fingers[i] != null) {
-				fingers[i].fingerType = (Finger.FingerType)i;
+		fingers[i].fingerType = (Finger.FingerType)i;
         fingers[i].UpdateFinger();
+//				if (fingers[i].fingerType.ToString() == "TYPE_MIDDLE") {
+//					Debug.Log("fingers[i]: " + fingers[i]);
+//					Debug.Log("fingers[i].fingerType: " + fingers[i].fingerType);
+//
+//				}
 			}
 		}
   }
