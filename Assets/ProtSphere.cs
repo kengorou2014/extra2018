@@ -21,6 +21,7 @@ public class ProtSphere : MonoBehaviour {
 //		Debug.Log("FingerCount: " + FingerCount);
 
 		InteractionBox interactionBox = frame.InteractionBox;
+		Debug.Log("interactionBox: " + interactionBox);
 
 		for ( int i = 0; i < FingerObjects.Length; i++ ) {
 			var leapFinger = frame.Fingers[i];
@@ -30,7 +31,7 @@ public class ProtSphere : MonoBehaviour {
 
 			if ( leapFinger.IsValid ) {
 				Vector normalizedPosition = interactionBox.NormalizePoint(leapFinger.TipPosition );
-				normalizedPosition *= 8;
+				normalizedPosition *= 10;
 				normalizedPosition.z = -normalizedPosition.z;
 				unityFinger.transform.localPosition = ToVector3( normalizedPosition );
 			}
