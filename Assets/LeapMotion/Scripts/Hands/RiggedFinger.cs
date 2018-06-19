@@ -35,6 +35,10 @@ public class RiggedFinger : FingerModel {
         bones[i].rotation = GetBoneRotation(i) * Reorientation();
         if (deformPosition) {
           bones[i].position = GetBoneCenter(i);
+//					Debug.Log (GetBoneCenter (i));
+//					if (i == 3) {
+//						Debug.Log ("hoge");
+//					}
         }
       }
     }

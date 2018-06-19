@@ -10,6 +10,7 @@ public class TestSphere : MonoBehaviour {
 	public FingerModel[] fingers = new FingerModel[NUM_FINGERS];
 	protected Hand hand_;
 	protected HandController controller_;
+	protected Controller leap_controller_;
 	protected bool mirror_z_axis_ = false;
 
 
@@ -23,14 +24,14 @@ public class TestSphere : MonoBehaviour {
 		return controller_.transform.TransformPoint(scaled_wrist_position) -
 			controller_.transform.position;
 	}
-
+		
 	// Use this for initialization
 	void Start () {
-		Debug.Log("start");
 		for (int i = 0; i < fingers.Length; ++i) {
 			if (fingers[i] != null) {
 				fingers[i].SetLeapHand(hand_);
 				fingers[i].SetOffset(GetHandOffset());
+//				Debug.Log(GetBoneCenter);
 			}
 		}
 	}
@@ -45,10 +46,8 @@ public class TestSphere : MonoBehaviour {
 
 		for (int i = 0; i < fingers.Length; ++i) {
 //			ここまでiきてる
-
+//			sphere.transform.position = Vector3.zero;
 			if (fingers[i] != null) {
-//				ここからiきてない
-				Debug.Log (i);
 				
 				fingers[i].fingerType = (Finger.FingerType)i;
 
@@ -58,10 +57,12 @@ public class TestSphere : MonoBehaviour {
 					
 //										Debug.Log("fingers[i]: " + fingers[i]);
 					//					Debug.Log("fingers[i].fingerType: " + fingers[i].fingerType);
-					//					Debug.Log("palm.position: " + GetPalmPosition());
+//					Debug.Log("palm.position: " + GetPalmPosition());
 //					Debug.Log("tip.position: " + fingers[i].GetTipPosition());
 //					sphere.transform.position =  fingers[i].GetTipPosition ();
-//					sphere.transform.position = Vector3.zero;
+//					Debug.Log ("sphereposition: " + sphere.transform.position);
+//					Debug.Log ("tipposition: " + fingers[i].GetTipPosition());
+
 					//					Debug.Log ("testSphere: " + testSphere.name);
 				}
 			}

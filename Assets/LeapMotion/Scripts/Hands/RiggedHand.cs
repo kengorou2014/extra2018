@@ -38,13 +38,14 @@ public class RiggedHand : HandModel {
       if (fingers[i] != null) {
 		fingers[i].fingerType = (Finger.FingerType)i;
         fingers[i].UpdateFinger();
-//				if (fingers[i].fingerType.ToString() == "TYPE_MIDDLE") {
+				if (fingers[i].fingerType.ToString() == "TYPE_MIDDLE") {
 //					Debug.Log("fingers[i]: " + fingers[i]);
 //					Debug.Log("fingers[i].fingerType: " + fingers[i].fingerType);
 //					Debug.Log("palm.position: " + GetPalmPosition());
 //					Debug.Log("tip.position: " + fingers[i].GetTipPosition());
 //					Debug.Log ("testSphere: " + testSphere.name);
-//				}
+//					fingers[i].transform.position = Vector3.zero;
+				}
 			}
 		}
   }

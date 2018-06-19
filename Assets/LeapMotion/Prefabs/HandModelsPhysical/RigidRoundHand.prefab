@@ -984,7 +984,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 862e1c8d784604a8ba021be6abc6470a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fingerType: 1
+  fingerType: 4
   bones:
   - {fileID: 0}
   - {fileID: 460536}
@@ -995,6 +995,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   filtering: 0.5
+  sphere: {fileID: 1532463902150346, guid: ee97b55ea84da453cbf71642803e318d, type: 2}
 --- !u!114 &11460534
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1006,7 +1007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 862e1c8d784604a8ba021be6abc6470a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fingerType: 1
+  fingerType: 3
   bones:
   - {fileID: 0}
   - {fileID: 460542}
@@ -1017,6 +1018,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   filtering: 0.5
+  sphere: {fileID: 1532463902150346, guid: ee97b55ea84da453cbf71642803e318d, type: 2}
 --- !u!114 &11460536
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1028,7 +1030,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 862e1c8d784604a8ba021be6abc6470a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fingerType: 1
+  fingerType: 2
   bones:
   - {fileID: 0}
   - {fileID: 460548}
@@ -1039,6 +1041,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   filtering: 0.5
+  sphere: {fileID: 1532463902150346, guid: ee97b55ea84da453cbf71642803e318d, type: 2}
 --- !u!114 &11460538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1061,6 +1064,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   filtering: 0.5
+  sphere: {fileID: 1532463902150346, guid: ee97b55ea84da453cbf71642803e318d, type: 2}
 --- !u!114 &11460540
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1083,6 +1087,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   filtering: 0.5
+  sphere: {fileID: 1532463902150346, guid: ee97b55ea84da453cbf71642803e318d, type: 2}
 --- !u!114 &11460542
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -122,7 +122,6 @@
      <Compile Include="Assets\LeapMotion\Widgets\Scripts\Utils\ExponentialSmoothing.cs" />
      <Compile Include="Assets\LeapMotion\Widgets\Scripts\Utils\FrameRateControls.cs" />
      <Compile Include="Assets\Scripts\ProtSphere.cs" />
-     <Compile Include="Assets\Scripts\SampleCode.cs" />
      <Compile Include="Assets\Scripts\TestSphere.cs" />
      <Compile Include="Assets\Scripts\WebCamController.cs" />
      <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-Basic.shader" />

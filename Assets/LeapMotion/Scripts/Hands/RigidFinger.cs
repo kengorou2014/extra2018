@@ -13,12 +13,16 @@ public class RigidFinger : SkeletalFinger {
 
   public float filtering = 0.5f;
 
+  public GameObject sphere;
+  private GameObject _sphere;
+
   void Start() {
-    for (int i = 0; i < bones.Length; ++i) {
-      if (bones[i] != null) {
-        bones[i].GetComponent<Rigidbody>().maxAngularVelocity = Mathf.Infinity;
-      }
-    }
+		for (int i = 0; i < bones.Length; ++i) {
+			if (bones [i] != null) {
+				bones [i].GetComponent<Rigidbody> ().maxAngularVelocity = Mathf.Infinity;
+			}
+		}
+		GameObject _sphere = (GameObject)Instantiate (sphere, sphere.transform.position, Quaternion.identity);
   }
 
   public override void UpdateFinger() {
@@ -69,6 +73,11 @@ public class RigidFinger : SkeletalFinger {
         if (!useVelocity) {
           bones[i].position = GetBoneCenter(i);
           bones[i].rotation = GetBoneRotation(i);
+
+//		  _sphere.transform.position = GetBoneCenter (i);
+					if (i == 3) {
+						_sphere.transform.position = GetBoneCenter (i);
+					}
         }
       }
     }
