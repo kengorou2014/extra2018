@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio for Mac
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "extra2018-master", "extra2018-master.csproj", "{82262547-0CB0-6834-B8D9-1918256A63D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "extra2018-master.Editor", "extra2018-master.Editor.csproj", "{5FD7C26C-1A92-8970-07C1-ED655320F670}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82262547-0CB0-6834-B8D9-1918256A63D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82262547-0CB0-6834-B8D9-1918256A63D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82262547-0CB0-6834-B8D9-1918256A63D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82262547-0CB0-6834-B8D9-1918256A63D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FD7C26C-1A92-8970-07C1-ED655320F670}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FD7C26C-1A92-8970-07C1-ED655320F670}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FD7C26C-1A92-8970-07C1-ED655320F670}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FD7C26C-1A92-8970-07C1-ED655320F670}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

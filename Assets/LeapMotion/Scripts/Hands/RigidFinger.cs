@@ -75,11 +75,16 @@ public class RigidFinger : SkeletalFinger {
           bones[i].rotation = GetBoneRotation(i);
 
 //		  _sphere.transform.position = GetBoneCenter (i);
-					if (i == 3) {
-						_sphere.transform.position = GetBoneCenter (i);
-					}
+					//if (i == 3) {
+					//	_sphere.transform.position = GetBoneCenter (i);
+					//}
         }
       }
     }
   }
+	public void Update()
+	{
+        //sphere.transform.position = GetBoneCenter(2);	
+	}
 }
+

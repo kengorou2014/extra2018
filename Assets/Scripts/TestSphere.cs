@@ -1,71 +1,59 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿/******************************************************************************\
+* Copyright (C) Leap Motion, Inc. 2011-2014.                                   *
+* Leap Motion proprietary. Licensed under Apache 2.0                           *
+* Available at http://www.apache.org/licenses/LICENSE-2.0.html                 *
+\******************************************************************************/
+
 using UnityEngine;
+using System.Collections;
 using Leap;
 
-public class TestSphere : MonoBehaviour {
+// The finger model for our rigid hand made out of various cubes.
+public class TestSphere : MonoBehaviour
+{
+    public const int NUM_BONES = 4;
 
-	public GameObject sphere;
-	public const int NUM_FINGERS = 5;
-	public FingerModel[] fingers = new FingerModel[NUM_FINGERS];
-	protected Hand hand_;
-	protected HandController controller_;
-	protected Controller leap_controller_;
-	protected bool mirror_z_axis_ = false;
+    protected HandController controller_;
+    protected Finger finger_;
+    protected Vector3 offset_ = Vector3.zero;
+    protected bool mirror_z_axis_ = false;
+    public GameObject[] bones = new GameObject[NUM_BONES];
 
+    //public float filtering = 0.5f;
 
-	public Vector3 GetHandOffset() {
-		if (controller_ == null || hand_ == null)
-			return Vector3.zero;
+    //public GameObject sphere;
+    //private GameObject _sphere;
 
-		Vector3 additional_movement = controller_.handMovementScale - Vector3.one;
-		Vector3 scaled_wrist_position = Vector3.Scale(additional_movement, hand_.WristPosition.ToUnityScaled(mirror_z_axis_));
+    void Start()
+    {
+        
+        //for (int i = 0; i < bones.Length; ++i)
+        //{
+        //    if (bones[i] != null)
+        //    {
+        //        bones[i].GetComponent<Rigidbody>().maxAngularVelocity = Mathf.Infinity;
+        //    }
+        //}
+        //GameObject _sphere = (GameObject)Instantiate(sphere, sphere.transform.position, Quaternion.identity);
+    }
 
-		return controller_.transform.TransformPoint(scaled_wrist_position) -
-			controller_.transform.position;
-	}
-		
-	// Use this for initialization
-	void Start () {
-		for (int i = 0; i < fingers.Length; ++i) {
-			if (fingers[i] != null) {
-				fingers[i].SetLeapHand(hand_);
-				fingers[i].SetOffset(GetHandOffset());
-//				Debug.Log(GetBoneCenter);
-			}
-		}
-	}
+    public Vector3 GetBoneCenter(int bone_type)
+    {
+        if (controller_ != null && finger_ != null)
+        {
+            Bone bone = finger_.Bone((Bone.BoneType)(bone_type));
+            return controller_.transform.TransformPoint(bone.Center.ToUnityScaled(mirror_z_axis_)) + offset_;
+        }
+        if (bones[bone_type])
+        {
+            return bones[bone_type].transform.position;
+        }
+        return Vector3.zero;
+    }
 
-	// Update is called once per frame
-
-	void Update () {
-		
-		if (fingers [2] != null) {
-
-		}
-
-		for (int i = 0; i < fingers.Length; ++i) {
-//			ここまでiきてる
-//			sphere.transform.position = Vector3.zero;
-			if (fingers[i] != null) {
-				
-				fingers[i].fingerType = (Finger.FingerType)i;
-
-
-				if (fingers[i].fingerType.ToString() == "TYPE_MIDDLE") {
-					
-					
-//										Debug.Log("fingers[i]: " + fingers[i]);
-					//					Debug.Log("fingers[i].fingerType: " + fingers[i].fingerType);
-//					Debug.Log("palm.position: " + GetPalmPosition());
-//					Debug.Log("tip.position: " + fingers[i].GetTipPosition());
-//					sphere.transform.position =  fingers[i].GetTipPosition ();
-//					Debug.Log ("sphereposition: " + sphere.transform.position);
-//					Debug.Log ("tipposition: " + fingers[i].GetTipPosition());
-
-					//					Debug.Log ("testSphere: " + testSphere.name);
-				}
-			}
-		}
-	}
+    public void Update()
+    {
+        transform.position = GetBoneCenter(2);
+    }
 }
+
