@@ -121,8 +121,11 @@
      <Compile Include="Assets\LeapMotion\Widgets\Scripts\SliderActivationManager.cs" />
      <Compile Include="Assets\LeapMotion\Widgets\Scripts\Utils\ExponentialSmoothing.cs" />
      <Compile Include="Assets\LeapMotion\Widgets\Scripts\Utils\FrameRateControls.cs" />
+     <Compile Include="Assets\Scripts\ChildColliderEnter.cs" />
+     <Compile Include="Assets\Scripts\IndexCollision.cs" />
      <Compile Include="Assets\Scripts\ProtSphere.cs" />
      <Compile Include="Assets\Scripts\TestSphere.cs" />
+     <Compile Include="Assets\Scripts\TextureController.cs" />
      <Compile Include="Assets\Scripts\WebCamController.cs" />
      <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\LeapMotion\Resources\LeapCG.cginc" />

@@ -163,6 +163,7 @@ GameObject:
   - component: {fileID: 460550}
   - component: {fileID: 5460554}
   - component: {fileID: 13684506}
+  - component: {fileID: 114940673885282042}
   m_Layer: 0
   m_Name: bone3
   m_TagString: Untagged
@@ -329,6 +330,7 @@ GameObject:
   m_Component:
   - component: {fileID: 460572}
   - component: {fileID: 11460538}
+  - component: {fileID: 114687949393908946}
   m_Layer: 0
   m_Name: index
   m_TagString: Untagged
@@ -885,7 +887,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!54 &5460556
 Rigidbody:
   m_ObjectHideFlags: 1
@@ -995,7 +997,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   filtering: 0.5
-  sphere: {fileID: 0}
 --- !u!114 &11460534
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1018,7 +1019,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   filtering: 0.5
-  sphere: {fileID: 0}
 --- !u!114 &11460536
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1041,7 +1041,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   filtering: 0.5
-  sphere: {fileID: 1532463902150346, guid: ee97b55ea84da453cbf71642803e318d, type: 2}
 --- !u!114 &11460538
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1064,7 +1063,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   filtering: 0.5
-  sphere: {fileID: 0}
 --- !u!114 &11460540
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1087,7 +1085,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   filtering: 0.5
-  sphere: {fileID: 0}
 --- !u!114 &11460542
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1330,3 +1327,25 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 160576}
   m_IsPrefabParent: 1
+--- !u!114 &114687949393908946
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 430951cede44848629d6a4f9c20b4b77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114940673885282042
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0593a475f99ba427188f24573c98200f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

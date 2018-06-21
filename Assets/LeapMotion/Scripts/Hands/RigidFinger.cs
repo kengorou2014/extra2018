@@ -13,8 +13,8 @@ public class RigidFinger : SkeletalFinger {
 
   public float filtering = 0.5f;
 
-  public GameObject sphere;
-  private GameObject _sphere;
+//  public GameObject sphere;
+//  private GameObject _sphere;
 
   void Start() {
 		for (int i = 0; i < bones.Length; ++i) {
@@ -22,7 +22,7 @@ public class RigidFinger : SkeletalFinger {
 				bones [i].GetComponent<Rigidbody> ().maxAngularVelocity = Mathf.Infinity;
 			}
 		}
-		GameObject _sphere = (GameObject)Instantiate (sphere, sphere.transform.position, Quaternion.identity);
+//		GameObject _sphere = (GameObject)Instantiate (sphere, sphere.transform.position, Quaternion.identity);
   }
 
   public override void UpdateFinger() {

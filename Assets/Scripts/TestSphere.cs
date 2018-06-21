@@ -18,6 +18,7 @@ public class TestSphere : MonoBehaviour
     protected Vector3 offset_ = Vector3.zero;
     protected bool mirror_z_axis_ = false;
     public GameObject[] bones = new GameObject[NUM_BONES];
+//	public GameObject bone;
 
     //public float filtering = 0.5f;
 
