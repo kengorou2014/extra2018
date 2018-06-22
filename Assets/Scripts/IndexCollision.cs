@@ -16,7 +16,7 @@ public class IndexCollision : MonoBehaviour {
 		isIndexTouch = false;
 	}
 
-	void Update(){
+//	void Update(){
 //		Debug.Log (isIndexTouch);
-	}
+//	}
 }
