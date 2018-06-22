@@ -13,6 +13,7 @@ public class ChildColliderEnter: MonoBehaviour {
 	Texture2D tex_skin1;
 	Texture2D tex_skin2;
 	Texture2D defaultskin;
+	List<int> permanent_flag = new List<int>();
 
 	void Start () {
 		parent = gameObject.transform.parent.gameObject;
@@ -24,13 +25,23 @@ public class ChildColliderEnter: MonoBehaviour {
 	void OnTriggerStay(Collider other) {
 		if (other.gameObject.name == "FirstQuadrant") {
 			flag = 1;
+			permanent_flag.Add (1);
 		} else if (other.gameObject.name == "SecondQuadrant") {
 			flag = 2;
+			permanent_flag.Add (2);
 		}
 	}
 
 	void OnTriggerExit(Collider other) {
 		flag = 0;
+	}
+
+	public int isTouching() {
+		return flag;
+	}
+
+	public List<int> permanentFlag() {
+		return permanent_flag;
 	}
 
 	void Update(){
