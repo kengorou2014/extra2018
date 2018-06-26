@@ -380,8 +380,11 @@
     <Compile Include="Assets\Scripts\TextureController.cs" />
     <Compile Include="Assets\Scripts\WebCamController.cs" />
     <Compile Include="Assets\TK-Script\LeapBehaviourScript.cs" />
+    <Compile Include="Assets\TK-Script\LeapFinger.cs" />
+    <Compile Include="Assets\TK-Script\LeapPalm.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Attach obj\Foliage Free\Readme.txt" />
     <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
     <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
     <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\BlurEffectConeTaps.shader" />
