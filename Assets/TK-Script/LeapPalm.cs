@@ -9,6 +9,12 @@ public class LeapPalm : MonoBehaviour
 
     public int PalmCount;
     public GameObject[] PalmObjects;
+	ChildColliderEnter collider;
+	private int flag = 0;
+	bool green_flag;
+	bool metal_flag;
+	public bool isForest;
+	public bool isMachine;
 
     void Start()
     {
@@ -18,23 +24,45 @@ public class LeapPalm : MonoBehaviour
     {
         Frame frame = controller.Frame();
         PalmCount = frame.Fingers.Count;
+		collider = GameObject.Find ("RigidRoundHand/index/bone3").GetComponent<ChildColliderEnter>();
+		if (collider) {
+			flag = collider.isTouching ();
+			green_flag = collider.TouchedGreen();
+			metal_flag = collider.TouchedMetal();
+		}
 
         for (int i = 0; i < PalmObjects.Length; i++)
         {
             var leapPalm = frame.Hands[i];
             var unityPalm = PalmObjects[i];
-            SetVisible(unityPalm, leapPalm.IsValid);
-            if (leapPalm.IsValid)
-            {
-                Vector normalizedPosition = leapPalm.PalmPosition;
-                Vector normalizedDirection = leapPalm.Direction;
+			var prefabName = "Finger" + (i+1).ToString();
+//            SetVisible(unityPalm, leapPalm.IsValid);
+			if (isForest) {
+				SetVisible (unityPalm, green_flag);
+				if (leapPalm.IsValid && green_flag) {
+					
+					Vector normalizedPosition = leapPalm.PalmPosition;
+					Vector normalizedDirection = leapPalm.Direction;
+					
+					normalizedPosition.z = -normalizedPosition.z;
+					
+					unityPalm.transform.localPosition = ToVector3 (normalizedPosition);
+					unityPalm.transform.localRotation = Quaternion.Euler (ToVector3 (normalizedDirection * 100));
+				}
 
-                normalizedPosition.z = -normalizedPosition.z;
+			} else if (isMachine) {
+				SetVisible (unityPalm, metal_flag);
+				if (leapPalm.IsValid && metal_flag) {
 
-                unityPalm.transform.localPosition = ToVector3(normalizedPosition);
-                unityPalm.transform.localRotation = Quaternion.Euler(ToVector3(normalizedDirection * 100));
+					Vector normalizedPosition = leapPalm.PalmPosition;
+					Vector normalizedDirection = leapPalm.Direction;
 
-            }
+					normalizedPosition.z = -normalizedPosition.z;
+
+					unityPalm.transform.localPosition = ToVector3 (normalizedPosition);
+					unityPalm.transform.localRotation = Quaternion.Euler (ToVector3 (normalizedDirection * 100));
+				}
+			}
         }
     }
 

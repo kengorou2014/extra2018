@@ -166,6 +166,8 @@
      <Compile Include="Assets\Scripts\TextureController.cs" />
      <Compile Include="Assets\Scripts\WebCamController.cs" />
      <Compile Include="Assets\TK-Script\LeapBehaviourScript.cs" />
+     <Compile Include="Assets\TK-Script\LeapFinger.cs" />
+     <Compile Include="Assets\TK-Script\LeapPalm.cs" />
      <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
@@ -216,6 +218,7 @@
      <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Luminance.shader" />
      <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-Lighted.shader" />
      <None Include="Assets\LeapMotion\Resources\PassthroughBackground.shader" />
+     <None Include="Assets\Attach obj\Foliage Free\Readme.txt" />
      <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionSelective.shader" />
      <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\Bokeh34.shader" />
      <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\CameraMotionBlurDX11.shader" />
