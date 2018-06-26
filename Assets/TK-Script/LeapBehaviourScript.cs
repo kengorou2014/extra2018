@@ -25,7 +25,7 @@ public class LeapBehaviourScript : MonoBehaviour
         FingerCount = frame.Fingers.Count;
 		collider = GameObject.Find ("RigidRoundHand/index/bone3").GetComponent<ChildColliderEnter>();
 		if (collider) {
-			flag = collider.isTouching ();
+			//flag = collider.isTouching ();
 			permanent_flag  = collider.permanentFlag();
 		}
 
