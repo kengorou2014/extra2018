@@ -338,14 +338,14 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &331574863
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 331574862}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 968b4bbfd7a424079b58b5169360d5fe, type: 3}
   m_Name: 
@@ -353,6 +353,8 @@ MonoBehaviour:
   PalmCount: 0
   PalmObjects:
   - {fileID: 1485928890}
+  isForest: 1
+  isMachine: 0
 --- !u!4 &331574864
 Transform:
   m_ObjectHideFlags: 0
@@ -1183,7 +1185,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1431237390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1313,14 +1315,14 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1572427083
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1572427082}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 968b4bbfd7a424079b58b5169360d5fe, type: 3}
   m_Name: 
@@ -1328,6 +1330,8 @@ MonoBehaviour:
   PalmCount: 0
   PalmObjects:
   - {fileID: 295535403}
+  isForest: 0
+  isMachine: 1
 --- !u!4 &1572427084
 Transform:
   m_ObjectHideFlags: 0
