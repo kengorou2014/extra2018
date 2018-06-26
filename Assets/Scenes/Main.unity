@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465785, g: 0.49641252, b: 0.574817, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -338,7 +338,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &331574863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -353,6 +353,8 @@ MonoBehaviour:
   PalmCount: 0
   PalmObjects:
   - {fileID: 1485928890}
+  isForest: 1
+  isMachine: 0
 --- !u!4 &331574864
 Transform:
   m_ObjectHideFlags: 0
@@ -1183,7 +1185,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1431237390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1313,7 +1315,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1572427083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1328,6 +1330,8 @@ MonoBehaviour:
   PalmCount: 0
   PalmObjects:
   - {fileID: 295535403}
+  isForest: 0
+  isMachine: 1
 --- !u!4 &1572427084
 Transform:
   m_ObjectHideFlags: 0
