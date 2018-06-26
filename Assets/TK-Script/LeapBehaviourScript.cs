@@ -10,7 +10,7 @@ public class LeapBehaviourScript : MonoBehaviour
 
     public int FingerCount;
     public GameObject[] FingerObjects;
-	public ChildColliderEnter collider;
+	ChildColliderEnter collider;
 	private int flag = 0;
 	bool green_flag;
 	bool metal_flag;
