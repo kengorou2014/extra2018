@@ -13,7 +13,9 @@ public class ChildColliderEnter: MonoBehaviour {
 	Texture2D tex_skin1;
 	Texture2D tex_skin2;
 	Texture2D defaultskin;
-	List<int> permanent_flag = new List<int>();
+//	List<int> permanent_flag = new List<int>();
+	public bool green_flag = false;
+	public bool metal_flag = false;
 
 	void Start () {
 		parent = gameObject.transform.parent.gameObject;
@@ -25,10 +27,8 @@ public class ChildColliderEnter: MonoBehaviour {
 	void OnTriggerStay(Collider other) {
 		if (other.gameObject.name == "FirstQuadrant") {
 			flag = 1;
-			permanent_flag.Add (1);
 		} else if (other.gameObject.name == "SecondQuadrant") {
 			flag = 2;
-			permanent_flag.Add (2);
 		}
 	}
 
@@ -40,16 +40,24 @@ public class ChildColliderEnter: MonoBehaviour {
 		return flag;
 	}
 
-	public List<int> permanentFlag() {
-		return permanent_flag;
+	public bool TouchedGreen() {
+
+		return green_flag;
+	}
+
+	public bool TouchedMetal() {
+
+		return metal_flag;
 	}
 
 	void Update(){
 		go.GetComponent<SkinnedMeshRenderer> ().sharedMaterial.mainTexture = defaultskin;
 		if (flag == 1) {
-			go.GetComponent<SkinnedMeshRenderer> ().sharedMaterial.mainTexture = tex_skin1; 
+			go.GetComponent<SkinnedMeshRenderer> ().sharedMaterial.mainTexture = tex_skin1;
+			metal_flag = true;
 		} else if (flag == 2) {
 			go.GetComponent<SkinnedMeshRenderer> ().sharedMaterial.mainTexture = tex_skin2;
+			green_flag = true;
 		}
 	}
 }

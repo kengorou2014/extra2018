@@ -12,11 +12,12 @@ public class LeapBehaviourScript : MonoBehaviour
     public GameObject[] FingerObjects;
 	public ChildColliderEnter collider;
 	private int flag = 0;
-	private List<int> permanent_flag = new List<int>();
+	bool green_flag;
+	bool metal_flag;
 
     void Start()
     {
-//		collider = GameObject.Find (ChildColliderEnter);
+
     }
 
     void Update()
@@ -26,37 +27,34 @@ public class LeapBehaviourScript : MonoBehaviour
 		collider = GameObject.Find ("RigidRoundHand/index/bone3").GetComponent<ChildColliderEnter>();
 		if (collider) {
 			flag = collider.isTouching ();
-			permanent_flag  = collider.permanentFlag();
+			green_flag = collider.TouchedGreen();
+			metal_flag = collider.TouchedMetal();
 		}
-
-		//1本目の指
-//		if (permanenet_flag.match(1)){
-//			var leapFinger_0 = frame.Fingers[0];
-//			var unityFinger_0 = FingerObjects[0];
-//			SetVisible(unityFinger_0, leapFinger_0.IsValid);
-//		}
-
-		//2本目の指
-		//3本目の指
-		//4本目の指
-		//5本目の指
+			
 
         for (int i = 0; i < FingerObjects.Length; i++)
         {
             var leapFinger = frame.Fingers[i];
             var unityFinger = FingerObjects[i];
             SetVisible(unityFinger, leapFinger.IsValid);
-			if (leapFinger.IsValid && permanent_flag.Exists (x => x == i))
-            {
-				Debug.Log (unityFinger.name);
-                Vector normalizedPosition = leapFinger.TipPosition;
-                Vector normalizedDirection = leapFinger.Direction;
+			if (leapFinger.IsValid && metal_flag && unityFinger.name == "Finger5") {
+				
+				Vector normalizedPosition = leapFinger.TipPosition;
+				Vector normalizedDirection = leapFinger.Direction;
 
-                normalizedPosition.z = -normalizedPosition.z;
-                unityFinger.transform.localPosition = ToVector3(normalizedPosition);
-                unityFinger.transform.localRotation = Quaternion.Euler(ToVector3(normalizedDirection*100));
+				normalizedPosition.z = -normalizedPosition.z;
+				unityFinger.transform.localPosition = ToVector3 (normalizedPosition);
+				unityFinger.transform.localRotation = Quaternion.Euler (ToVector3 (normalizedDirection * 100));
 
-            }
+			} else if (leapFinger.IsValid && green_flag && unityFinger.name == "Finger1") {
+
+				Vector normalizedPosition = leapFinger.TipPosition;
+				Vector normalizedDirection = leapFinger.Direction;
+
+				normalizedPosition.z = -normalizedPosition.z;
+				unityFinger.transform.localPosition = ToVector3 (normalizedPosition);
+				unityFinger.transform.localRotation = Quaternion.Euler (ToVector3 (normalizedDirection * 100));
+			}
         }
 
 
