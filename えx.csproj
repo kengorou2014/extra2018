@@ -379,7 +379,6 @@
     <Compile Include="Assets\Scripts\TestSphere.cs" />
     <Compile Include="Assets\Scripts\TextureController.cs" />
     <Compile Include="Assets\Scripts\WebCamController.cs" />
-    <Compile Include="Assets\TK-Script\LeapBehaviourScript.cs" />
     <Compile Include="Assets\TK-Script\LeapFinger.cs" />
     <Compile Include="Assets\TK-Script\LeapPalm.cs" />
   </ItemGroup>
