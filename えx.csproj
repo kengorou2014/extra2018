@@ -375,15 +375,17 @@
     <Compile Include="Assets\LeapMotion\Widgets\Scripts\Utils\FrameRateControls.cs" />
     <Compile Include="Assets\Scripts\ChildColliderEnter.cs" />
     <Compile Include="Assets\Scripts\IndexCollision.cs" />
-    <Compile Include="Assets\Scripts\ProtSphere.cs" />
-    <Compile Include="Assets\Scripts\TestSphere.cs" />
+    <Compile Include="Assets\Scripts\LeapFinger.cs" />
+    <Compile Include="Assets\Scripts\LeapPalm.cs" />
+    <Compile Include="Assets\Scripts\PalmOrbit.cs" />
+    <Compile Include="Assets\Scripts\SequenceController.cs" />
     <Compile Include="Assets\Scripts\TextureController.cs" />
     <Compile Include="Assets\Scripts\WebCamController.cs" />
-    <Compile Include="Assets\TK-Script\LeapFinger.cs" />
-    <Compile Include="Assets\TK-Script\LeapPalm.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Attach obj\Butterfly (Animated)\Butterfly (Animated).txt" />
     <None Include="Assets\Attach obj\Foliage Free\Readme.txt" />
+    <None Include="Assets\Attach obj\Julai_models\ReadMe.txt" />
     <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
     <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
     <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\BlurEffectConeTaps.shader" />
@@ -457,6 +459,8 @@
     <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularDisplacement.shader" />
     <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularSmooth.shader" />
     <None Include="Assets\Attach obj\NatureStarterKit2\info.txt" />
+    <None Include="Assets\Attach obj\PB_Spider\readme.txt" />
+    <None Include="Assets\Attach obj\Rainer_AK\RELEASE NOTE.txt" />
     <None Include="Assets\Attach obj\Workplace Tools\README.txt" />
     <None Include="Assets\LeapMotion\DemoResources\ScrollerText.txt" />
     <None Include="Assets\LeapMotion\Dependencies.txt" />

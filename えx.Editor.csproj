@@ -343,7 +343,9 @@
     <Compile Include="Assets\LeapMotion\Editor\LeapImageRetrieverEditor.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Attach obj\Butterfly (Animated)\Butterfly (Animated).txt" />
     <None Include="Assets\Attach obj\Foliage Free\Readme.txt" />
+    <None Include="Assets\Attach obj\Julai_models\ReadMe.txt" />
     <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
     <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
     <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\BlurEffectConeTaps.shader" />
@@ -417,6 +419,8 @@
     <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularDisplacement.shader" />
     <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularSmooth.shader" />
     <None Include="Assets\Attach obj\NatureStarterKit2\info.txt" />
+    <None Include="Assets\Attach obj\PB_Spider\readme.txt" />
+    <None Include="Assets\Attach obj\Rainer_AK\RELEASE NOTE.txt" />
     <None Include="Assets\Attach obj\Workplace Tools\README.txt" />
     <None Include="Assets\LeapMotion\DemoResources\ScrollerText.txt" />
     <None Include="Assets\LeapMotion\Dependencies.txt" />
