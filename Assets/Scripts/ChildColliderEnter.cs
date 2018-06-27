@@ -13,9 +13,12 @@ public class ChildColliderEnter: MonoBehaviour {
 	Texture2D tex_skin1;
 	Texture2D tex_skin2;
 	Texture2D defaultskin;
-//	List<int> permanent_flag = new List<int>();
+	List<int> touch_sequence = new List<int>();
+	int[] touch_seq = new int[]{};
 	public bool green_flag = false;
 	public bool metal_flag = false;
+	public bool animal_flag = false;
+	public bool cyber_flag = false;
 
 	void Start () {
 		parent = gameObject.transform.parent.gameObject;
@@ -29,6 +32,22 @@ public class ChildColliderEnter: MonoBehaviour {
 			flag = 1;
 		} else if (other.gameObject.name == "SecondQuadrant") {
 			flag = 2;
+		} else if (other.gameObject.name == "ThirdQuadrant") {
+			flag = 3;
+		} else if (other.gameObject.name == "ForthQuadrant") {
+			flag = 4;
+		}
+	}
+
+	void OnTriggerEnter(Collider other) {
+		if (other.gameObject.name == "FirstQuadrant") {
+			touch_sequence.Add (1);
+		} else if (other.gameObject.name == "SecondQuadrant") {
+			touch_sequence.Add (2);
+		} else if (other.gameObject.name == "ThirdQuadrant") {
+			touch_sequence.Add (3);
+		} else if (other.gameObject.name == "ForthQuadrant") {
+			touch_sequence.Add (4);
 		}
 	}
 
@@ -41,23 +60,56 @@ public class ChildColliderEnter: MonoBehaviour {
 	}
 
 	public bool TouchedGreen() {
-
 		return green_flag;
 	}
 
 	public bool TouchedMetal() {
-
 		return metal_flag;
+	}
+
+	public bool TouchedAnimal() {
+		return animal_flag;
+	}
+
+	public bool TouchedCyber() {
+		return cyber_flag;
+	}
+
+	public List<int> touchSequence() {		
+		return touch_sequence;
 	}
 
 	void Update(){
 		go.GetComponent<SkinnedMeshRenderer> ().sharedMaterial.mainTexture = defaultskin;
+
 		if (flag == 1) {
+//			機械の手になる時の分岐
 			go.GetComponent<SkinnedMeshRenderer> ().sharedMaterial.mainTexture = tex_skin1;
 			metal_flag = true;
+			if (!touch_sequence.Exists (x => x == 1)) {
+				touch_sequence.Add (1);
+			}
 		} else if (flag == 2) {
+//			植物の手になる分岐
 			go.GetComponent<SkinnedMeshRenderer> ().sharedMaterial.mainTexture = tex_skin2;
 			green_flag = true;
+			if (!touch_sequence.Exists (x => x == 2)) {
+				touch_sequence.Add (2);
+			}
+		} else if (flag == 3) {
+			//			動物の手になる分岐
+			go.GetComponent<SkinnedMeshRenderer> ().sharedMaterial.mainTexture = tex_skin2;
+			green_flag = true;
+			if (!touch_sequence.Exists (x => x == 3)) {
+				touch_sequence.Add (3);
+			}
+		} else if (flag == 4) {
+			//			サイバーの手になる分岐
+			go.GetComponent<SkinnedMeshRenderer> ().sharedMaterial.mainTexture = tex_skin2;
+			green_flag = true;
+			if (!touch_sequence.Exists (x => x == 4)) {
+				touch_sequence.Add (4);
+			}
 		}
 	}
 }
