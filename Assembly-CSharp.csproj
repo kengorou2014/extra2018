@@ -163,6 +163,7 @@
      <Compile Include="Assets\Scripts\IndexCollision.cs" />
      <Compile Include="Assets\Scripts\LeapFinger.cs" />
      <Compile Include="Assets\Scripts\LeapPalm.cs" />
+     <Compile Include="Assets\Scripts\PalmOrbit.cs" />
      <Compile Include="Assets\Scripts\SequenceController.cs" />
      <Compile Include="Assets\Scripts\TextureController.cs" />
      <Compile Include="Assets\Scripts\WebCamController.cs" />
@@ -171,6 +172,7 @@
      <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
      <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
+     <None Include="Assets\Attach obj\cyber\Rainer_AK\RELEASE NOTE.txt" />
      <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\ShowAlphaChannel.shader" />
      <None Include="Assets\LeapMotion\Resources\LeapCG.cginc" />
      <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\SunShaftsComposite.shader" />
@@ -195,8 +197,9 @@
      <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\ContrastComposite.shader" />
      <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset3.shader" />
      <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\FisheyeShader.shader" />
-     <None Include="Assets\Attach obj\Workplace Tools\README.txt" />
+     <None Include="Assets\Attach obj\machine\Workplace Tools\README.txt" />
      <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Apply.shader" />
+     <None Include="Assets\Attach obj\Animals\PB_Spider\readme.txt" />
      <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\frag_ao.cginc" />
      <None Include="Assets\LeapMotion\Shaders\RimShading.shader" />
      <None Include="Assets\LeapMotion\Dependencies.txt" />
@@ -216,7 +219,7 @@
      <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Luminance.shader" />
      <None Include="Assets\LeapMotion\Materials\Sources\Shaders\Toony-Lighted.shader" />
      <None Include="Assets\LeapMotion\Resources\PassthroughBackground.shader" />
-     <None Include="Assets\Attach obj\Foliage Free\Readme.txt" />
+     <None Include="Assets\Attach obj\Forest\Foliage Free\Readme.txt" />
      <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionSelective.shader" />
      <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\Bokeh34.shader" />
      <None Include="Assets\Attach obj\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\CameraMotionBlurDX11.shader" />
@@ -288,7 +291,7 @@
  <HintPath>/Applications/Unity/Unity2017.4.2/PlaybackEngines/VuforiaSupport/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
  </Reference>
  <Reference Include="LeapCSharp.NET3.5">
- <HintPath>/Users/kengorou/projects/extra2018/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
+ <HintPath>/Users/kengorou/Desktop/extra2018/Assets/Plugins/LeapCSharp.NET3.5.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>/Users/kengorou/Library/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.4/UnityEngine.Advertisements.dll</HintPath>

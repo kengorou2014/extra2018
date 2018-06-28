@@ -38,13 +38,14 @@ public class PalmOrbit : MonoBehaviour
         }
     }
 
-    void SetVisible(GameObject obj, bool visible)
-    {
-        foreach (Renderer component in obj.GetComponents<Renderer>())
-        {
-            component.enabled = visible;
-        }
-    }
+	void SetVisible(GameObject obj, bool visible)
+	{
+		if (visible) {
+			obj.SetActive (true);
+		} else {
+			obj.SetActive (false);
+		}
+	}
 
     Vector3 ToVector3(Vector v)
     {

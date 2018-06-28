@@ -37,8 +37,8 @@ public class LeapFinger : MonoBehaviour
 			metal_flag = collider.TouchedMetal();
 			animal_flag = collider.TouchedAnimal ();
 			cyber_flag = collider.TouchedCyber ();
-		}
 
+		}
 		for (int i = 0; i < FingerObjects.Length; i++)
 		{
 			var leapFinger = frame.Fingers[i];
@@ -69,9 +69,10 @@ public class LeapFinger : MonoBehaviour
 
 	void SetVisible(GameObject obj, bool visible)
 	{
-		foreach (MeshRenderer component in obj.GetComponents<MeshRenderer>())
-		{
-			component.enabled = visible;
+		if (visible) {
+			obj.SetActive (true);
+		} else {
+			obj.SetActive (false);
 		}
 	}
 
