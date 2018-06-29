@@ -28,25 +28,25 @@ public class ChildColliderEnter: MonoBehaviour {
 	}
 
 	void OnTriggerStay(Collider other) {
-		if (other.gameObject.name == "FirstQuadrant") {
+		if (other.gameObject.name == "machinebox") {
 			flag = 1;
-		} else if (other.gameObject.name == "SecondQuadrant") {
+		} else if (other.gameObject.name == "forestbox") {
 			flag = 2;
-		} else if (other.gameObject.name == "ThirdQuadrant") {
+		} else if (other.gameObject.name == "animalbox") {
 			flag = 3;
-		} else if (other.gameObject.name == "ForthQuadrant") {
+		} else if (other.gameObject.name == "cyberbox") {
 			flag = 4;
 		}
 	}
 
 	void OnTriggerEnter(Collider other) {
-		if (other.gameObject.name == "FirstQuadrant") {
+		if (other.gameObject.name == "machinebox") {
 			touch_sequence.Add (1);
-		} else if (other.gameObject.name == "SecondQuadrant") {
+		} else if (other.gameObject.name == "forestbox") {
 			touch_sequence.Add (2);
-		} else if (other.gameObject.name == "ThirdQuadrant") {
+		} else if (other.gameObject.name == "animalbox") {
 			touch_sequence.Add (3);
-		} else if (other.gameObject.name == "ForthQuadrant") {
+		} else if (other.gameObject.name == "cyberbox") {
 			touch_sequence.Add (4);
 		}
 	}
@@ -98,15 +98,15 @@ public class ChildColliderEnter: MonoBehaviour {
 			}
 		} else if (flag == 3) {
 			//			動物の手になる分岐
-			go.GetComponent<SkinnedMeshRenderer> ().sharedMaterial.mainTexture = tex_skin2;
-			green_flag = true;
+//			go.GetComponent<SkinnedMeshRenderer> ().sharedMaterial.mainTexture = tex_skin2;
+			animal_flag = true;
 			if (!touch_sequence.Exists (x => x == 3)) {
 				touch_sequence.Add (3);
 			}
 		} else if (flag == 4) {
 			//			サイバーの手になる分岐
-			go.GetComponent<SkinnedMeshRenderer> ().sharedMaterial.mainTexture = tex_skin2;
-			green_flag = true;
+//			go.GetComponent<SkinnedMeshRenderer> ().sharedMaterial.mainTexture = tex_skin2;
+			cyber_flag = true;
 			if (!touch_sequence.Exists (x => x == 4)) {
 				touch_sequence.Add (4);
 			}

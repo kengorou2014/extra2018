@@ -35,6 +35,8 @@ public class LeapPalm : MonoBehaviour
 			flag = collider.isTouching ();
 			green_flag = collider.TouchedGreen();
 			metal_flag = collider.TouchedMetal();
+			animal_flag = collider.TouchedAnimal();
+			cyber_flag = collider.TouchedCyber();
 		}
 			
         var leapPalm = frame.Hands[0];
@@ -67,9 +69,9 @@ public class LeapPalm : MonoBehaviour
 	}
 
 	void SetInteractionOrbitObject(bool typeOfObject, bool objectFlag, Hand leapPalm, GameObject unityPalm){
-
 		SetVisible (unityPalm, objectFlag);
-		if (leapPalm.IsValid)
+		Debug.Log (objectFlag);
+		if (leapPalm.IsValid && objectFlag)
 		{
 			Vector normalizedPosition = leapPalm.PalmPosition;
 			Vector offset = new Vector(2, 1, 2);

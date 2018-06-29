@@ -8,8 +8,8 @@ public class SequenceController : MonoBehaviour {
 
 	List<int> seq = new List<int> ();
 	private int flag = 0;
-	private List<int> grow_seq = new List<int> {1,2}; 
-	private List<int> rot_seq = new List<int> {2,1}; 
+	private List<int> grow_seq = new List<int> {1,2,3,4}; 
+	private List<int> rot_seq = new List<int> {4,3,2,1}; 
 	private bool firstFrame = true;
 
 	AudioSource growSound;
@@ -30,7 +30,7 @@ public class SequenceController : MonoBehaviour {
 			flag = collider.isTouching ();
 		}
 
-		if (seq.Count == 2) {
+		if (seq.Count == 4) {
 			bool isGrow = CompareList (seq, grow_seq);
 			bool isRot = CompareList (seq, rot_seq);
 			if (isGrow && firstFrame) {
