@@ -27,6 +27,11 @@ public class ChildColliderEnter: MonoBehaviour {
 	public bool metal_flag = false;
 	public bool animal_flag = false;
 	public bool cyber_flag = false;
+	float alpha = 0.0f;
+	float soundalpha = 1.0f;
+	float speed = 0.05f;
+	static float t ;
+	Color skinColor = new Color (1,1,1,1);
 
 	void Start () {
 		AudioSource[] objectSounds = GetComponents<AudioSource> ();
@@ -55,31 +60,50 @@ public class ChildColliderEnter: MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
+		alpha = 0;
 		if (other.gameObject.name == "machinebox") {
 			touch_sequence.Add (1);
-			machineSound.Play ();
+			try{
+				machineSound.Play ();
+			}
+			catch{
+			}
 		} else if (other.gameObject.name == "forestbox") {
 			touch_sequence.Add (2);
-			grassSound.Play();
+			try{
+				grassSound.Play();
+			}
+			catch{
+			}
 		} else if (other.gameObject.name == "animalbox") {
 			touch_sequence.Add (3);
-			animalSound.Play ();
+			try{
+				animalSound.Play ();
+			}
+			catch{
+			}
 		} else if (other.gameObject.name == "cyberbox") {
 			touch_sequence.Add (4);
-			cyberSound.Play ();
+			try{
+				cyberSound.Play ();
+			}
+			catch{
+			}
 		}
 	}
 
 	void OnTriggerExit(Collider other) {
 		flag = 0;
+		alpha = 0;
+		soundalpha = 1.0f;
 		if (other.gameObject.name == "machinebox") {
-			machineSound.Stop();
+			FadeOut(machineSound);
 		} else if (other.gameObject.name == "forestbox") {
-			grassSound.Stop();
+			FadeOut(grassSound);
 		} else if (other.gameObject.name == "animalbox") {
-			animalSound.Stop();
+			FadeOut(animalSound);
 		} else if (other.gameObject.name == "cyberbox") {
-			cyberSound.Stop();
+			FadeOut(cyberSound);
 		}
 	}
 
@@ -108,22 +132,30 @@ public class ChildColliderEnter: MonoBehaviour {
 	}
 
 	void Update(){
-		go.GetComponent<SkinnedMeshRenderer> ().sharedMaterial.mainTexture = defaultskin;
 
-		if (flag == 1) {
-//			機械の手になる時の分岐
+		t = 0.0f;
+
+		if (flag == 0) {
+			go.GetComponent<SkinnedMeshRenderer> ().sharedMaterial.mainTexture = defaultskin;
+
+			FadeIn ();
+		} else if (flag == 1) {
+			Debug.Log ("機械のて！！");
+			//			機械の手になる時の分岐
 			go.GetComponent<SkinnedMeshRenderer> ().sharedMaterial.mainTexture = tex_skin1;
 			metal_flag = true;
 			if (!touch_sequence.Exists (x => x == 1)) {
 				touch_sequence.Add (1);
 			}
+			FadeIn ();
 		} else if (flag == 2) {
-//			植物の手になる分岐
+			//			植物の手になる分岐
 			go.GetComponent<SkinnedMeshRenderer> ().sharedMaterial.mainTexture = tex_skin2;
 			green_flag = true;
 			if (!touch_sequence.Exists (x => x == 2)) {
 				touch_sequence.Add (2);
 			}
+			FadeIn ();
 		} else if (flag == 3) {
 			//			動物の手になる分岐
 			go.GetComponent<SkinnedMeshRenderer> ().sharedMaterial.mainTexture = tex_skin3;
@@ -131,6 +163,7 @@ public class ChildColliderEnter: MonoBehaviour {
 			if (!touch_sequence.Exists (x => x == 3)) {
 				touch_sequence.Add (3);
 			}
+			FadeIn ();
 		} else if (flag == 4) {
 			//			サイバーの手になる分岐
 			go.GetComponent<SkinnedMeshRenderer> ().sharedMaterial.mainTexture = tex_skin4;
@@ -138,6 +171,23 @@ public class ChildColliderEnter: MonoBehaviour {
 			if (!touch_sequence.Exists (x => x == 4)) {
 				touch_sequence.Add (4);
 			}
+			FadeIn ();
 		}
+	}
+
+	void FadeIn(){
+		if (alpha < 0.95f) {
+			alpha += speed;
+		}
+		skinColor = new Color (1.0f, 1.0f, 1.0f, alpha);
+		go.GetComponent<SkinnedMeshRenderer> ().sharedMaterial.SetColor ("_Color", skinColor);
+	}
+
+	void FadeOut(AudioSource sound){
+		while (soundalpha > 0.05f) {
+			soundalpha -= speed;
+			sound.volume = soundalpha;
+		}
+		sound.Stop ();
 	}
 }
