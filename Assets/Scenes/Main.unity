@@ -835,8 +835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1dffccb68994ef0a96f669fb9d387a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: 0.01
-  speed: 1
+  flagNumber: 1
 --- !u!1 &184694268
 GameObject:
   m_ObjectHideFlags: 0
@@ -3771,8 +3770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1dffccb68994ef0a96f669fb9d387a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: 0.01
-  speed: 0
+  flagNumber: 0
 --- !u!1 &1236824836
 GameObject:
   m_ObjectHideFlags: 0
@@ -4393,8 +4391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1dffccb68994ef0a96f669fb9d387a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: 0.01
-  speed: 0
+  flagNumber: 0
 --- !u!114 &1466402333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4406,8 +4403,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1dffccb68994ef0a96f669fb9d387a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: 1
-  speed: 0
+  flagNumber: 3
 --- !u!1 &1472055225
 GameObject:
   m_ObjectHideFlags: 0
@@ -4576,8 +4572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1dffccb68994ef0a96f669fb9d387a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: 0.1
-  speed: 0
+  flagNumber: 0
 --- !u!114 &1472055233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4589,8 +4584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1dffccb68994ef0a96f669fb9d387a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: 1
-  speed: 0
+  flagNumber: 2
 --- !u!1 &1485292195
 GameObject:
   m_ObjectHideFlags: 0
@@ -4811,8 +4805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1dffccb68994ef0a96f669fb9d387a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: 0.01
-  speed: 0
+  flagNumber: 0
 --- !u!114 &1517349566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4824,8 +4817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a1dffccb68994ef0a96f669fb9d387a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amplitude: 1
-  speed: 0
+  flagNumber: 4
 --- !u!1 &1572427082
 GameObject:
   m_ObjectHideFlags: 0
