@@ -70,7 +70,6 @@ public class LeapPalm : MonoBehaviour
 
 	void SetInteractionOrbitObject(bool typeOfObject, bool objectFlag, Hand leapPalm, GameObject unityPalm){
 		SetVisible (unityPalm, objectFlag);
-		Debug.Log (objectFlag);
 		if (leapPalm.IsValid && objectFlag)
 		{
 			Vector normalizedPosition = leapPalm.PalmPosition;
