@@ -160,6 +160,7 @@
      <Compile Include="Assets\LeapMotion\Widgets\Scripts\Utils\ExponentialSmoothing.cs" />
      <Compile Include="Assets\LeapMotion\Widgets\Scripts\Utils\FrameRateControls.cs" />
      <Compile Include="Assets\Scripts\ChildColliderEnter.cs" />
+     <Compile Include="Assets\Scripts\FloatObject.cs" />
      <Compile Include="Assets\Scripts\IndexCollision.cs" />
      <Compile Include="Assets\Scripts\LeapFinger.cs" />
      <Compile Include="Assets\Scripts\LeapPalm.cs" />
@@ -304,6 +305,10 @@
  <Reference Include="UnityEngine.StandardEvents">
  <HintPath>/Users/kengorou/Library/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{FEDEDB37-3921-913C-CD96-DCEEC3D22B28}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
