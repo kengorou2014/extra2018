@@ -11,6 +11,7 @@ public class SequenceController : MonoBehaviour {
 	private List<int> grow_seq = new List<int> {1,2,3,4}; 
 	private List<int> rot_seq = new List<int> {4,3,2,1}; 
 	private bool firstFrame = true;
+	private int resultflag;
 
 	AudioSource growSound;
 	AudioSource rotSound;
@@ -36,13 +37,19 @@ public class SequenceController : MonoBehaviour {
 			if (isGrow && firstFrame) {
 				Debug.Log ("成長！");
 				growSound.Play ();
+				resultflag = 1;
 				firstFrame = false;
 			} else if (isRot && firstFrame) {
 				Debug.Log ("腐敗！");
 				rotSound.Play ();
+				resultflag = 2;
 				firstFrame = false;
 			}
 		}
+	}
+
+	public int ResultFlag(){
+		return resultflag;
 	}
 
 	bool CompareList(List<int> seq1, List<int> seq2) {

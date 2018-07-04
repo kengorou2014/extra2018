@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class FloatingObject : MonoBehaviour {
 
+
+	private float speed = 10f;
 	private float amplitude = 0.2f;
 	private int frameCnt = 0; // フレームカウント
 	private float defaultY;
@@ -36,14 +38,15 @@ public class FloatingObject : MonoBehaviour {
 			frameCnt = 0;
 		}
 		if( 0 == frameCnt%2 ){
-			// 上下に振動させる（ふわふわを表現）
-			//			float posx = Mathf.Sin(2.0f*Mathf.PI*(float)(frameCnt % offset)/(200.0f-1.0f));
 			float posx = transform.position.x;
 			float posy = Mathf.Sin(2.0f*Mathf.PI*(float)(frameCnt % 200)/(200.0f-1.0f));
-			//			float posz = Mathf.Sin(2.0f*Mathf.PI*(float)(frameCnt % offset)/(200.0f-1.0f));
 			float posz = transform.position.z;
 			transform.position = new Vector3(posx, defaultY + posy*amplitude, posz);
-			//			iTween.MoveAdd(gameObject,new Vector3(0, amplitude * posYSin, 0),0.0f);
+
+			float rotx = Mathf.Sin(2.0f*Mathf.PI*(float)(frameCnt % 200)/(200.0f-1.0f));
+			float roty = Mathf.Sin(2.0f*Mathf.PI*(float)(frameCnt % 400)/(200.0f-1.0f));
+			float rotz = Mathf.Sin(2.0f*Mathf.PI*(float)(frameCnt % 100)/(200.0f-1.0f));
+			transform.Rotate(rotx, roty, rotz);
 		}
 	}
 }

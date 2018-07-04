@@ -1,12 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/FloatObject.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ResultController.cs">
     <Files>
-      <File FileName="Assets/Scripts/ChildColliderEnter.cs" Line="65" Column="46" />
-      <File FileName="Assets/Scripts/SequenceController.cs" Line="41" Column="10" />
+      <File FileName="Assets/Scripts/ChildColliderEnter.cs" Line="118" Column="20" />
+      <File FileName="Assets/Scripts/SequenceController.cs" Line="9" Column="2" />
       <File FileName="Assets/Scripts/LeapFinger.cs" Line="13" Column="14" />
-      <File FileName="Assets/Scripts/LeapPalm.cs" Line="72" Column="38" />
-      <File FileName="Assets/Scripts/FloatObject.cs" Line="22" Column="1" />
+      <File FileName="Assets/Scripts/LeapPalm.cs" Line="75" Column="25" />
+      <File FileName="Assets/Scripts/FloatingObject.cs" Line="27" Column="9" />
+      <File FileName="Assets/Explosion/Explosion.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/ResultController.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
