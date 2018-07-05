@@ -21,6 +21,8 @@ public class LeapFinger : MonoBehaviour
 	public bool isAnimal;
 	public bool isCyber;
 
+	bool HandExists;
+
 	void Start()
 	{
 
@@ -31,6 +33,7 @@ public class LeapFinger : MonoBehaviour
 		Frame frame = controller.Frame();
 		FingerCount = frame.Fingers.Count;
 		collider = GameObject.Find ("RigidRoundHand/index/bone3").GetComponent<ChildColliderEnter>();
+
 		if (collider) {
 			flag = collider.isTouching ();
 			green_flag = collider.TouchedGreen();
@@ -71,13 +74,21 @@ public class LeapFinger : MonoBehaviour
 	{
 		if (visible) {
 			obj.SetActive (true);
+			HandExists = true;
+//			gameObject.SetActive (true);
 		} else {
 			obj.SetActive (false);
+			HandExists = false;
+//			gameObject.SetActive (false);
 		}
 	}
 
 	Vector3 ToVector3(Vector v)
 	{
 		return new UnityEngine.Vector3(v.x, v.y, v.z);
+	}
+
+	public bool HandExist(){
+		return HandExists;
 	}
 }

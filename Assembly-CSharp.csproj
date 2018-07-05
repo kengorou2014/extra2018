@@ -256,6 +256,7 @@
      <Compile Include="Assets\Scripts\ChildColliderEnter.cs" />
      <Compile Include="Assets\Scripts\FloatingObject.cs" />
      <Compile Include="Assets\Scripts\FollowHand.cs" />
+     <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\IndexCollision.cs" />
      <Compile Include="Assets\Scripts\LeapFinger.cs" />
      <Compile Include="Assets\Scripts\LeapPalm.cs" />

@@ -21,7 +21,6 @@ public class Explosion : MonoBehaviour {
 
 
 	private bool once = true;
-	//	private bool exp2 = true;
 
 	void Start() {
 		seqcontroller = GameObject.Find ("InteractionObject").GetComponent<SequenceController>();
@@ -58,5 +57,10 @@ public class Explosion : MonoBehaviour {
 
 	void Explose4() {
 		Instantiate (ExploadObj4, ExploadPos4.transform.position, Quaternion.identity);
+	}
+
+	public void Initialize() {
+		flag = 0;
+		once = true;
 	}
 }

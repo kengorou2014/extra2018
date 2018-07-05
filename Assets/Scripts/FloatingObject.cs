@@ -15,7 +15,6 @@ public class FloatingObject : MonoBehaviour {
 
 	void Start(){
 		defaultY = transform.position.y;
-
 	}
 
 

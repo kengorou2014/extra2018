@@ -62,7 +62,12 @@ public class ChildColliderEnter: MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		alpha = 0;
 //		Debug.Log (realworldSound.volume);
-		StartCoroutine ("FadeOut", realworldSound);
+		try{
+			StartCoroutine ("FadeOut", realworldSound);
+		}catch{
+			Debug.Log("hand");
+		}
+			
 
 		if (other.gameObject.name == "machinebox") {
 			touch_sequence.Add (1);
@@ -104,14 +109,18 @@ public class ChildColliderEnter: MonoBehaviour {
 		alpha = 0;
 
 //		realworldSound.Play ();
-		if (other.gameObject.name == "machinebox") {
-			StartCoroutine ("FadeOut", machineSound);
-		} else if (other.gameObject.name == "forestbox") {
-			StartCoroutine ("FadeOut", grassSound);
-		} else if (other.gameObject.name == "animalbox") {
-			StartCoroutine ("FadeOut", animalSound);
-		} else if (other.gameObject.name == "cyberbox") {
-			StartCoroutine ("FadeOut", cyberSound);
+		try{
+			if (other.gameObject.name == "machinebox") {
+				StartCoroutine ("FadeOut", machineSound);
+			} else if (other.gameObject.name == "forestbox") {
+				StartCoroutine ("FadeOut", grassSound);
+			} else if (other.gameObject.name == "animalbox") {
+				StartCoroutine ("FadeOut", animalSound);
+			} else if (other.gameObject.name == "cyberbox") {
+				StartCoroutine ("FadeOut", cyberSound);
+			}
+		}catch{
+			Debug.Log ("other");
 		}
 	}
 
@@ -209,5 +218,18 @@ public class ChildColliderEnter: MonoBehaviour {
 			time += wait;
 		}
 		sound.Stop();
+	}
+
+	public void Initialize(){
+
+		Debug.Log ("initialize!!!");
+		touch_sequence = new List<int>();
+		touch_seq = new int[]{};
+		green_flag = false;
+		metal_flag = false;
+		animal_flag = false;
+		cyber_flag = false;
+		alpha = 0.0f;
+		speed = 0.05f;
 	}
 }

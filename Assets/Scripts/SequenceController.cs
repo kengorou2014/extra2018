@@ -8,10 +8,12 @@ public class SequenceController : MonoBehaviour {
 
 	List<int> seq = new List<int> ();
 	private int flag = 0;
-	private List<int> grow_seq = new List<int> {1,2,3,4}; 
-	private List<int> rot_seq = new List<int> {4,3,2,1}; 
+//	private List<int> grow_seq = new List<int> {1,2,3,4}; 
+//	private List<int> rot_seq = new List<int> {4,3,2,1}; 
 	private bool firstFrame = true;
 	private int resultflag;
+	private float random;
+	private bool isGrow;
 
 	AudioSource growSound;
 	AudioSource rotSound;
@@ -21,6 +23,8 @@ public class SequenceController : MonoBehaviour {
 		AudioSource[] sources = GetComponents<AudioSource> ();
 		growSound = sources [0];
 		rotSound = sources [1];
+
+		random = Random.Range(0.0f, 1.0f);
 	}
 	
 	// Update is called once per frame
@@ -31,15 +35,21 @@ public class SequenceController : MonoBehaviour {
 			flag = collider.isTouching ();
 		}
 
+		if (random >= 0.5f) {
+			isGrow = true;
+		} else {
+			isGrow = false;
+		}
+
 		if (seq.Count == 4) {
-			bool isGrow = CompareList (seq, grow_seq);
-			bool isRot = CompareList (seq, rot_seq);
+//			bool isGrow = CompareList (seq, grow_seq);
+//			bool isRot = CompareList (seq, rot_seq);
 			if (isGrow && firstFrame) {
 				Debug.Log ("成長！");
 				growSound.Play ();
 				resultflag = 1;
 				firstFrame = false;
-			} else if (isRot && firstFrame) {
+			} else if (!isGrow && firstFrame) {
 				Debug.Log ("腐敗！");
 				rotSound.Play ();
 				resultflag = 2;
@@ -62,6 +72,15 @@ public class SequenceController : MonoBehaviour {
 			}
 		}
 		return result;
+	}
+
+	public void Initialize(){
+		firstFrame = true;
+		growSound.Stop ();
+		rotSound.Stop ();
+		resultflag = new int();
+		random = new float ();
+		isGrow = new bool ();
 	}
 
 }
