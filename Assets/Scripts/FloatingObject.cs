@@ -46,6 +46,7 @@ public class FloatingObject : MonoBehaviour {
 			float rotx = Mathf.Sin(2.0f*Mathf.PI*(float)(frameCnt % 200)/(200.0f-1.0f));
 			float roty = Mathf.Sin(2.0f*Mathf.PI*(float)(frameCnt % 400)/(200.0f-1.0f));
 			float rotz = Mathf.Sin(2.0f*Mathf.PI*(float)(frameCnt % 100)/(200.0f-1.0f));
+
 			transform.Rotate(rotx, roty, rotz);
 		}
 	}

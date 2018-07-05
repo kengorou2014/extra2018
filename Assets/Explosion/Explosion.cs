@@ -53,10 +53,10 @@ public class Explosion : MonoBehaviour {
 	}
 
 	void Explose3() {
-		Instantiate (ExploadObj2, ExploadPos2.transform.position, Quaternion.identity);
+		Instantiate (ExploadObj3, ExploadPos3.transform.position, Quaternion.identity);
 	}
 
 	void Explose4() {
-		Instantiate (ExploadObj2, ExploadPos2.transform.position, Quaternion.identity);
+		Instantiate (ExploadObj4, ExploadPos4.transform.position, Quaternion.identity);
 	}
 }
